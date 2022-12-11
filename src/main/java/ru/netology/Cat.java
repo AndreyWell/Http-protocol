@@ -2,14 +2,14 @@ package ru.netology;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Cats {
+public class Cat {
     private String id;
     private String text;
     private String type;
     private String user;
     private Integer upVotes;
 
-    public Cats(
+    public Cat(
             @JsonProperty("id") String id,
             @JsonProperty("text") String text,
             @JsonProperty("type") String type,

@@ -38,11 +38,11 @@ public class Main {
         String body = new String(response.getEntity().getContent().readAllBytes(),
                 StandardCharsets.UTF_8);
 
-        List<Cats> cats = mapper.readValue(
+        List<Cat> cats = mapper.readValue(
                 body,
                 new TypeReference<>() {});
 
-        List<Cats> collect = cats.stream()
+        List<Cat> collect = cats.stream()
                 .filter(cat -> cat.getUpVotes() != null)
                 .collect(Collectors.toList());
 
